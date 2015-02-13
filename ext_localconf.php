@@ -12,8 +12,8 @@ t3lib_extMgm::addService($_EXTKEY,  'auth' /* sv type */,  'tx_beuseriprange_sv1
 			'subtype' => 'authUserBE',
 
 			'available' => TRUE,
-			'priority' => 50,
-			'quality' => 50,
+			'priority' => 70,
+			'quality' => 75,
 
 			'os' => '',
 			'exec' => '',

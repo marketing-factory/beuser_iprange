@@ -1,0 +1,5 @@
+{
+  "name": "mfc/beuser_iprange",
+  "description": "restrict BE-user to IP-range",
+  "type": "typo3-cms-extension"
+}

@@ -55,7 +55,7 @@ class tx_beuseriprange_sv1 extends \TYPO3\CMS\Sv\AbstractAuthenticationService
 
         $forwardedUserIp = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(';', $_SERVER['HTTP_X_FORWARDED_FOR']);
         if (!empty($forwardedUserIp) && (preg_match('/(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})/', $forwardedUserIp[0], $matches))) {
-            if ($matches[0]) {
+            if (!empty($matches[0])) {
                 $userIP = $matches[0];
             }
         }

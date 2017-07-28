@@ -10,12 +10,12 @@
 # writing. "version" and "dependencies" must not be touched!
 ########################################################################
 
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF[$_EXTKEY] = [
     'title' => 'IP-range for Admins/Be-user',
     'description' => 'restrict BE-user to IP-range',
     'category' => 'services',
     'shy' => 0,
-    'version' => '2.1.0',
+    'version' => '3.0.0',
     'dependencies' => '',
     'conflicts' => '',
     'priority' => '',
@@ -32,12 +32,11 @@ $EM_CONF[$_EXTKEY] = array(
     'author_company' => '',
     'CGLcompliance' => '',
     'CGLcompliance_note' => '',
-    'constraints' => array(
-        'depends' => array(
-            'php' => '5.3.0-7.0.99',
+    'constraints' => [
+        'depends' => [
             'typo3' => '6.2.0-7.9.99',
-        ),
-        'conflicts' => array(),
-        'suggests' => array(),
-    ),
-);
+        ],
+        'conflicts' => [],
+        'suggests' => [],
+    ],
+];

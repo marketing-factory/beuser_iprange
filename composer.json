@@ -3,8 +3,8 @@
 	"description": "restrict BE-user to IP-range",
 	"type": "typo3-cms-extension",
 	"autoload": {
-		"classmap": [
-			"sv1"
-		]
+		"psr-4": {
+			"Mfc\\BeuserIprange\\": "Classes/"
+		}
 	}
 }

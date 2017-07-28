@@ -1,12 +1,10 @@
 <?php
-if (!defined('TYPO3_MODE')) {
-    die ('Access denied.');
-}
+defined('TYPO3_MODE') || die('Access denied.');
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addService(
-    $_EXTKEY,
-    'auth' /* sv type */,
-    'tx_beuseriprange_sv1' /* sv key */,
+    'beuser_iprange',
+    'auth',
+    \Mfc\BeuserIprange\Services\AuthenticationService::class,
     array(
         'title' => 'IP-Range Authentication',
         'description' => 'Authenticates against IP-range lists',
@@ -16,8 +14,6 @@ if (!defined('TYPO3_MODE')) {
         'quality' => 75,
         'os' => '',
         'exec' => '',
-        'classFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) .
-            'sv1/class.tx_beuseriprange_sv1.php',
-        'className' => 'tx_beuseriprange_sv1',
+        'className' => \Mfc\BeuserIprange\Services\AuthenticationService::class,
     )
 );

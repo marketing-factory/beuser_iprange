@@ -88,6 +88,13 @@ class AuthenticationService extends \TYPO3\CMS\Sv\AbstractAuthenticationService
         return $result;
     }
 
+    /**
+     * @param string $ipStart
+     * @param string $ipEnd
+     * @param string $givenIP
+     *
+     * @return bool
+     */
     protected function inIPrange($ipStart, $ipEnd, $givenIP)
     {
         $start = ip2long($ipStart);

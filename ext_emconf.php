@@ -1,39 +1,19 @@
 <?php
 
-########################################################################
-# Extension Manager/Repository config file for ext "beuser_iprange".
-#
-# Auto generated 02-10-2011 07:50
-#
-# Manual updates:
-# Only the data in the array - everything else is removed by next
-# writing. "version" and "dependencies" must not be touched!
-########################################################################
-
-$EM_CONF[$_EXTKEY] = array(
-	'title' => 'IP-range for Admins/Be-user',
-	'description' => 'restrict BE-user to IP-range',
-	'category' => 'services',
-	'shy' => 0,
-	'version' => '2.0.0',
-	'dependencies' => '',
-	'conflicts' => '',
-	'priority' => '',
-	'loadOrder' => '',
-	'TYPO3_version' => '7.4.0-7.99.99',
-	'PHP_version' => '5.2-0.0.0',
-	'module' => '',
-	'state' => 'stable',
-	'uploadfolder' => 0,
-	'createDirs' => '',
-	'modify_tables' => '',
-	'clearcacheonload' => 1,
-	'lockType' => '',
-	'author' => 'Steffen Kamper',
-	'author_email' => 'info@sk-typo3.de',
-	'author_company' => '',
-	'CGLcompliance' => '',
-	'CGLcompliance_note' => '',
-);
-
-?>
+$EM_CONF['beuser_iprange'] = [
+    'title' => 'IP-range for Admins/Be-user',
+    'description' => 'restrict BE-user to IP-range',
+    'category' => 'services',
+    'version' => '3.1.0',
+    'state' => 'stable',
+    'clearcacheonload' => 1,
+    'author' => 'Steffen Kamper, Simon Schmidt',
+    'author_email' => 'typo3@marketing-factory.de',
+    'constraints' => [
+        'depends' => [
+            'typo3' => '6.2.0-8.7.99',
+        ],
+        'conflicts' => [],
+        'suggests' => [],
+    ],
+];

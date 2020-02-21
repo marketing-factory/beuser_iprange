@@ -2,6 +2,10 @@
 	"name": "mfc/beuser_iprange",
 	"description": "restrict BE-user to IP-range",
 	"type": "typo3-cms-extension",
+	"require": {
+    		"php": "^7.1",
+    		"typo3/cms-core": "^8.7||^9.5||^10.4"
+  	},
 	"autoload": {
 		"psr-4": {
 			"Mfc\\BeuserIprange\\": "Classes/"

@@ -2,6 +2,19 @@
 	"name": "mfc/beuser_iprange",
 	"description": "restrict BE-user to IP-range",
 	"type": "typo3-cms-extension",
+    "authors": [
+        {
+            "name": "Simon Schmidt",
+            "email": "sfs@marketing-factory.de",
+            "role": "Developer"
+        },
+        {
+            "name": "Karoline Steinfatt",
+            "email": "ks@marketing-factory.de",
+            "homepage": "https://www.marketing-factory.de/",
+            "role": "Maintainer"
+        }
+    ]
 	"require": {
     		"php": "^7.1",
     		"typo3/cms-core": "^8.7||^9.5||^10.4"

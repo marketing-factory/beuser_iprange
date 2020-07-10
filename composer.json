@@ -5,12 +5,10 @@
     "authors": [
         {
             "name": "Simon Schmidt",
-            "email": "sfs@marketing-factory.de",
             "role": "Developer"
         },
         {
             "name": "Karoline Steinfatt",
-            "email": "ks@marketing-factory.de",
             "homepage": "https://www.marketing-factory.de/",
             "role": "Maintainer"
         }

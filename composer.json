@@ -14,7 +14,7 @@
         }
     ],
   "replace": {
-    "mfc/beuser-iprange": "*"
+    "mfc/beuser_iprange": "*"
   },
 	"require": {
     		"php": "^7.2",

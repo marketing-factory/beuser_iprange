@@ -1,6 +1,9 @@
 <?php
 namespace Mfc\BeuserIprange\Services;
 
+use TYPO3\CMS\Core\Authentication\AbstractUserAuthentication;
+use TYPO3\CMS\Core\Service\AbstractService;
+
 /***************************************************************
  *  Copyright notice
  *
@@ -34,8 +37,23 @@ namespace Mfc\BeuserIprange\Services;
  *      $GLOBALS['TYPO3_CONF_VARS']['BE']['userAuth']['ipRange'] = '192.168.0.1-192.168.0.15,96.0.112.80-96.0.112.96';
  *
  */
-class AuthenticationService extends \TYPO3\CMS\Sv\AbstractAuthenticationService
+class AuthenticationService extends AbstractService
 {
+    /**
+     * @param $subType
+     * @param array $loginData
+     * @param array $authenticationInformation
+     * @param AbstractUserAuthentication $parentObject
+     */
+    public function initAuth(
+        $subType,
+        array $loginData,
+        array $authenticationInformation,
+        AbstractUserAuthentication &$parentObject
+    ) {
+
+    }
+
     /**
      * authenticate a user
      *
@@ -47,18 +65,7 @@ class AuthenticationService extends \TYPO3\CMS\Sv\AbstractAuthenticationService
         // if there's no IP-list given then the user is valid
         $result = 100;
 
-        // given IP-Address
-        $userIP = $this->authInfo['REMOTE_ADDR'];
-
-        $forwardedUserIp = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(';', $_SERVER['HTTP_X_FORWARDED_FOR']);
-        if (!empty($forwardedUserIp) &&
-            (preg_match('/(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})/', $forwardedUserIp[0], $matches))
-        ) {
-            if (!empty($matches[0])) {
-                $userIP = $matches[0];
-            }
-        }
-
+        $userIP = \TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('REMOTE_ADDR');
         if ($user['admin']) {
             $ipData = $GLOBALS['TYPO3_CONF_VARS']['BE']['adminAuth']['ipRange'];
         } else {

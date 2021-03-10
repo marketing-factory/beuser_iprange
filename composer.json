@@ -1,28 +1,35 @@
 {
-	"name": "mfc/beuser-iprange",
-	"description": "restrict BE-user to IP-range",
-	"type": "typo3-cms-extension",
-    "authors": [
-        {
-            "name": "Simon Schmidt",
-            "role": "Developer"
-        },
-        {
-            "name": "Karoline Steinfatt",
-            "homepage": "https://www.marketing-factory.de/",
-            "role": "Maintainer"
-        }
-    ],
+  "name": "mfc/beuser-iprange",
+  "description": "restrict BE-user to IP-range",
+  "type": "typo3-cms-extension",
+  "version": "5.0.2",
+  "authors": [
+    {
+      "name": "Simon Schmidt",
+      "role": "Developer"
+    },
+    {
+      "name": "Karoline Steinfatt",
+      "homepage": "https://www.marketing-factory.de/",
+      "role": "Maintainer"
+    }
+  ],
   "replace": {
     "mfc/beuser_iprange": "*"
   },
-	"require": {
-    		"php": "^7.2",
-    		"typo3/cms-core": "^8.7||^9.5||^10.4"
-  	},
-	"autoload": {
-		"psr-4": {
-			"Mfc\\BeuserIprange\\": "Classes/"
-		}
-	}
+  "require": {
+    "php": "^7.2",
+    "typo3/cms-core": "^8.7||^9.5||^10.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mfc\\BeuserIprange\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "beuser_iprange"
+    }
+  }
 }
+

@@ -1,8 +1,8 @@
 <?php
 namespace Mfc\BeuserIprange\Services;
 
+use TYPO3\CMS\Core\Authentication\AbstractAuthenticationService;
 use TYPO3\CMS\Core\Authentication\AbstractUserAuthentication;
-use TYPO3\CMS\Core\Service\AbstractService;
 
 /***************************************************************
  *  Copyright notice
@@ -37,30 +37,30 @@ use TYPO3\CMS\Core\Service\AbstractService;
  *      $GLOBALS['TYPO3_CONF_VARS']['BE']['userAuth']['ipRange'] = '192.168.0.1-192.168.0.15,96.0.112.80-96.0.112.96';
  *
  */
-class AuthenticationService extends AbstractService
+class AuthenticationService extends AbstractAuthenticationService
 {
     /**
-     * @param $subType
+     * @param string $mode
      * @param array $loginData
-     * @param array $authenticationInformation
-     * @param AbstractUserAuthentication $parentObject
+     * @param array $authInfo
+     * @param AbstractUserAuthentication $pObj
+     * @return void
      */
     public function initAuth(
-        $subType,
-        array $loginData,
-        array $authenticationInformation,
-        AbstractUserAuthentication &$parentObject
+        $mode,
+        $loginData,
+        $authInfo,
+        $pObj
     ) {
-
     }
 
     /**
      * authenticate a user
      *
-     * @param    array $user Data of user.
-     * @return    boolean
+     * @param array $user Data of user.
+     * @return boolean
      */
-    public function authUser($user)
+    public function authUser(array $user): bool
     {
         // if there's no IP-list given then the user is valid
         $result = 100;
@@ -102,7 +102,7 @@ class AuthenticationService extends AbstractService
      *
      * @return bool
      */
-    protected function inIPrange($ipStart, $ipEnd, $givenIP)
+    protected function inIPrange(string $ipStart, string $ipEnd, string $givenIP): bool
     {
         $start = ip2long($ipStart);
         $end = ip2long($ipEnd);

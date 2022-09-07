@@ -2,8 +2,12 @@
   "name": "mfc/beuser-iprange",
   "description": "restrict BE-user to IP-range",
   "type": "typo3-cms-extension",
-  "version": "5.0.2",
+  "version": "6.0.2",
   "authors": [
+    {
+      "name": "Eike Drost",
+      "role": "Developer"
+    },
     {
       "name": "Simon Schmidt",
       "role": "Developer"
@@ -19,7 +23,7 @@
   },
   "require": {
     "php": "^7.2",
-    "typo3/cms-core": "^8.7||^9.5||^10.4"
+    "typo3/cms-core": "^8.7||^9.5||^10.4||^11.5"
   },
   "autoload": {
     "psr-4": {

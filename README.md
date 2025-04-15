@@ -1,4 +1,5 @@
-**This Extension is retired** 
+**This Extension is retired**
+
 We have retired this extension in April 2025. Please read the details in our blogpost https://www.marketing-factory.com/blog/were-retiring-beuser-iprange
 
 **What does it do?**

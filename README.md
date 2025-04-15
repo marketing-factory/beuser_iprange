@@ -1,3 +1,6 @@
+**This Extension is retired** 
+We have retired this extension in April 2025. Please read the details in our blogpost https://www.marketing-factory.com/blog/were-retiring-beuser-iprange
+
 **What does it do?**
 - It gives the possibility to configure a valid IP-range for BE-users
 - There are 2 vars for configuration: one for admins and one for other be-user
